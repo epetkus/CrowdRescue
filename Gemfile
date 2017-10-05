@@ -23,9 +23,12 @@ gem 'will_paginate', github: 'Undo1/will_paginate'
 gem 'will_paginate-bootstrap', github: 'Charcoal-SE/will_paginate-bootstrap'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do
