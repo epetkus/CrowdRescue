@@ -2,7 +2,12 @@
   <div class="card border-danger">
     <div class="card-body text-danger">
       <h3 class="card-title">Hold up!</h3>
+      <% if current_user.nil? %>
+      <p><strong>You need to be logged in</strong> to access this page!</p>
+      <p>Once logged in, you'll need the <%= @role_name %> privilege.</p>
+      <% else %>
       <p>You're missing the required privilege to access this page - you need the <%= @role_name %> privilege.</p>
+      <% end %>
     </div>
   </div>
 </div>
